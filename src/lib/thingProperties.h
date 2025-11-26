@@ -10,7 +10,7 @@ String minhaSenha;
 
 // variaveis do Arduino Cloud
 void commandChange();
-void luzChange();
+void lightChange();
 
 String consoleComando;
 String statusSistema;
@@ -28,6 +28,6 @@ void initProperties(){
   ArduinoCloud.addProperty(consoleComando, READWRITE, ON_CHANGE, commandChange);
   ArduinoCloud.addProperty(statusSistema, READ, ON_CHANGE, NULL);
   ArduinoCloud.addProperty(temperatura, READ, ON_CHANGE, NULL);
-  ArduinoCloud.addProperty(luzInteligente, READWRITE, ON_CHANGE, luzChange);
+  ArduinoCloud.addProperty(luzInteligente, READWRITE, ON_CHANGE, lightChange);
   ArduinoCloud.addProperty(luminosidade, READ, ON_CHANGE, NULL);
 }   
